@@ -1,98 +1,108 @@
-###Locallens – AI-Powered Hyperlocal Discovery Platform###
-<img src="https://user-gen-media-assets.s3.amazonaws.com/seedream_images/e0fbf4cb-5d65-463e-97d7-3d48ef0f8323.png" alt="Locallens Architecture" width="600"/>
-##Overview##
-Locallens is a next-generation, Agentic AI-driven platform that helps users instantly discover, compare, and purchase products from both local and online stores – all optimized for verified inventory and sustainable, healthy shopping. By combining multi-modal intelligence, community collaboration, and carbon-aware route planning, Locallens brings a new standard of smart commerce to every neighborhood.
+# Locallens — AI-Powered Hyperlocal Discovery
 
-##Features##
-Universal Product Resolver:
-Instantly identify any product with links, images, or voice queries using AI-powered computer vision and NLP.
+![Locallens architecture](https://user-gen-media-assets.s3.amazonaws.com/seedream_images/e0fbf4cb-5d65-463e-97d7-3d48ef0f8323.png)
 
-Real-Time Local & Online Comparison:
-Aggregates live data from store APIs and web scraping modules for dynamic price, stock, pickup time, and CO₂ insights.
+Locallens helps users discover, compare, and purchase products from local and online stores while optimizing for verified inventory, price, pickup time, and sustainability.
 
-AI Trip & Bulk Order Planner:
-Outputs the most efficient shopping routes for bulk orders and multi-item pickups, minimizing travel and emissions.
+## Key features
 
-Community Verification:
-Crowdsourced real-time inventory updates and healthy store recommendations, incentivized by rewards and gamification.
+- Universal product resolver (links, images, voice) using computer vision + NLP
+- Real-time local & online comparison (price, stock, pickup time, CO₂ footprint)
+- AI trip & bulk-order planner for efficient pickups and reduced emissions
+- Community verification and crowdsourced inventory updates
+- Rewards & referral system to incentivize healthy/local shopping
 
-Sustainability Engine:
-Shows carbon footprint reductions and highlights eco-friendly store options.
+## Why Locallens
 
-Double-Sided Referral Rewards:
-Share Locallens and earn discounts for both referrer and referee, driving organic growth.
+Locallens combines agentic AI, community trust signals, and route optimization to surface healthier, lower-carbon shopping options at neighborhood scale.
 
-<img src="https://user-gen-media-assets.s3.amazonaws.com/seedream_images/7c46fb40-cfe1-48c3-aec5-5097e0dd9dcb.png" alt="Locallens Unique Features" width="600"/>
-##Why Locallens is Different##
-Locallens stands apart from traditional commerce platforms by using autonomous AI agents to:
+## Technology stack
 
-Proactively optimize bulk and health-focused local shopping.
+| Layer | Technology |
+|---|---|
+| Frontend | Flutter (mobile/web), optional React dashboard |
+| Backend | Python (FastAPI), Node.js services |
+| Database | Firebase Firestore, MongoDB |
+| AI / ML | Hugging Face models, Gemini Vision API (optional) |
+| Routing | Google Maps API, OR-Tools |
+| Scraping | Scrapy, BeautifulSoup |
+| Cache | Redis |
+| Auth & Security | OAuth2, AES encryption for sensitive data |
 
-Empower communities with crowd-sourced trust.
+## Quick start (developer)
 
-Support sustainable consumption and healthier daily habits.
+Requirements: Flutter SDK, Python 3.8+, Node.js, and git.
 
-##Dataflow Architecture##
-<img src="https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/80fc11d4b7ed9e6e53a8faad1f8147db/9c044365-704c-4dd9-9ca8-28317b0a938f/17520d2f.png" width="650"/>
-User inputs (link, image, voice) → AI parsing → backend data aggregation → real-time comparison → route optimization → community verification → rewards → user output.
+1. Clone the repo
 
-##Technology Stack##
-Layer	Technology
-Frontend	Flutter (mobile/web), React
-Backend	Python (FastAPI), Node.js
-Database	Firebase Firestore, MongoDB
-AI/ML	Hugging Face, Gemini Vision API
-Routing	Google Maps API, OR-Tools
-Scraping	Scrapy, BeautifulSoup
-Cache	Redis
-Auth/Security	OAuth2, AES encryption
-##Getting Started##
-Clone this repo
+```powershell
+git clone https://github.com/Aditya-MP/Locallens-AI-Powered-Hyperlocal-Discovery-Optimization.git
+cd Locallens/locallens
+```
 
-##Install dependencies##
+2. Install frontend deps (Flutter)
 
-Backend: pip install -r requirements.txt
+```powershell
+flutter pub get
+```
 
-Frontend: flutter pub get or npm install (for web)
+3. (Optional) Install React dashboard deps
 
-Configure environment variables
+```powershell
+cd web
+npm install
+cd ..
+```
 
-Add your Google Maps, Gemini, and any merchant API keys in .env
+4. Backend (Python)
 
-Run the Backend API
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+```
 
-python main.py (FastAPI)
+5. Configure environment variables
 
-node server.js (Node.js modules)
+Create a `.env` file with keys for Google Maps, Gemini (if used), and any merchant APIs. Example:
 
-Run the Frontend
+```env
+GOOGLE_MAPS_API_KEY=your_key
+GEMINI_API_KEY=your_key
+```
 
-flutter run for mobile/web
+6. Run services
 
-npm start (for React dashboard)
+- FastAPI backend:
 
-Enjoy Locallens and start discovering healthier, smarter shopping!
+```powershell
+python main.py
+```
 
-##Contributing##
-We welcome pull requests, feedback, and suggestions!
+- Flutter frontend (mobile/web):
 
-Fork, branch, and submit PRs for bug fixes, new features, or documentation.
+```powershell
+flutter run
+```
 
-See CONTRIBUTING.md for detailed guidelines.
+## Contributing
 
-##License##
-This project is licensed under the MIT License – see LICENSE.md for details.
+Contributions are welcome. Suggested workflow:
 
-##Acknowledgments##
-MumbaiHacks 2025 Hackathon and Devfolio for inspiration
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feat/my-feature`
+3. Commit changes and push
+4. Open a pull request describing your changes
 
-Community contributors, API partners, developers
+See `CONTRIBUTING.md` for detailed guidelines.
 
-All early users helping us make local commerce smarter and greener!
+## License
 
-Ready to power your community with AI-driven healthy shopping?
-Star this repo, open an issue, or join our movement!
-##NOTE - This Projec is still in builting process##
+This project is licensed under the MIT License — see `LICENSE.md`.
+
+## Acknowledgments
+
+MumbaiHacks 2025 and early contributors.
 
 ---
-_Last updated: 2025-10-25 UTC (pushed to GitHub to refresh display)_
+_Last updated: 2025-10-25 UTC_
