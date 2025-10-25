@@ -1,4 +1,4 @@
-##Locallens – AI-Powered Hyperlocal Discovery Platform##
+###Locallens – AI-Powered Hyperlocal Discovery Platform###
 <img src="https://user-gen-media-assets.s3.amazonaws.com/seedream_images/e0fbf4cb-5d65-463e-97d7-3d48ef0f8323.png" alt="Locallens Architecture" width="600"/>
 ##Overview##
 Locallens is a next-generation, Agentic AI-driven platform that helps users instantly discover, compare, and purchase products from both local and online stores – all optimized for verified inventory and sustainable, healthy shopping. By combining multi-modal intelligence, community collaboration, and carbon-aware route planning, Locallens brings a new standard of smart commerce to every neighborhood.
