@@ -61,3 +61,9 @@ runtime_log.txt
 
 # Env
 .env
+lib/config/env.dart
+
+# Test files with secrets
+test/gemini_api_test.dart
+test/final_app_test.dart
+test/working_gemini_test.dart
