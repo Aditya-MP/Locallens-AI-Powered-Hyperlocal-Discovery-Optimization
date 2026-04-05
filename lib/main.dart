@@ -1,18 +1,26 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'package:hive_flutter/hive_flutter.dart';
-import 'providers/app_provider.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 import 'screens/discovery_page.dart';
+import 'providers/app_provider.dart';
+import 'package:provider/provider.dart';
+import 'package:flutter/foundation.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Hive.initFlutter();
-  runApp(const MyApp());
+  
+  try {
+    await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  } catch (e) {
+    if (kDebugMode) {
+      print('Firebase initialization error: $e');
+    }
+  }
+  
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
@@ -20,12 +28,12 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (_) => AppProvider()),
       ],
       child: MaterialApp(
-        title: 'Locallens',
-        theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
-          useMaterial3: true,
-        ),
-        home: const DiscoveryPage(),
+        title: 'LocalLens',
+        debugShowCheckedModeBanner: false,
+        home: DiscoveryPage(),
+        routes: {
+          '/discovery': (context) => DiscoveryPage(),
+        },
       ),
     );
   }
