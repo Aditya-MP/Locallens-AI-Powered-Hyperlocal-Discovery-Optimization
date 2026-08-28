@@ -3,7 +3,7 @@ import 'dart:io';
 import 'package:http/http.dart' as http;
 
 class GeminiAPITester {
-  static const String apiKey = 'AIzaSyAQgMwV5fA5HcBquEabRV_RC2kxqWKdCOg'; // Your actual API key
+  static const String apiKey = 'gemini_api'; // Your actual API key
   
   // Test different API endpoints
   static Future<void> testAllEndpoints() async {

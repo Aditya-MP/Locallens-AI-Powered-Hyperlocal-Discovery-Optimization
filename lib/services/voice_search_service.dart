@@ -9,7 +9,7 @@ class VoiceSearchService {
   // Gemini AI for product classification
   static final _gemini = GenerativeModel(
     model: 'gemini-1.5-flash',
-    apiKey: 'AIzaSyAQgMwV5fA5HcBquEabRV_RC2kxqWKdCOg',
+    apiKey: 'gemini_api',
   );
   
   static Future<bool> initSpeech() async {
